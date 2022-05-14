@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>flex布局</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #eee;
+    }
+
+    /* * {
+        border: 1px solid black;
+      }*/
+    .flex {
+      display: flex;
+    }
+
+    .flex1 {
+      flex: 1;
+    }
+
+    .baise {
+      background-color: white;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .bj8 {
+      margin: 8px;
+    }
+
+    .ybj8 {
+      margin-right: 8px;
+    }
+
+    .sbj8 {
+      margin-top: 8px;
+    }
+
+    .yinying {
+      box-shadow: 5px 5px 3px rgb(216, 157, 157);
+    }
+
+    .daohang {
+      padding: 10px 20px;
+      border-bottom: 1px solid rgb(172, 70, 70);
+      font-size: 21px;
+      color: rgb(51, 29, 29);
+    }
+    @media screen and (max-width:600px) {
+      .cebian {
+        display: none;
+      }
+
+      .neirong {
+        flex-direction: column;
+      }
+
+      .shuju {
+        flex-direction: column;
+      }
+
+      .youqu {
+        margin-left: 8px;
+      }
+
+      .shujuk {
+        margin: 0 0 8px;
+        flex: auto;
+      }
+    }
+    .neirong::-webkit-scrollbar{
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="flex">
+  <!--侧边栏-->
+  <div style="width: 200px; z-index: 2" class="baise yinying cebian">
+    <!--头像栏-->
+    <div style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid #999;
+        " class="flex">
+      <img src="hgtj.png" height="100px" width="100px" />
+      <div style="margin: 5px;"></div>韩国童匠
+    </div>
+    </diy>
+    <!--导航栏-->
+    <div class="daohang">导航</div>
+    <div class="daohang">导航</div>
+    <div class="daohang">导航</div>
+    <div class="daohang">导航</div>
+    <div class="daohang">导航</div>
+    <div class="daohang">导航</div>
+  </div>
+  <!--主区域-->
+  <div class="flex1 flex column">
+    <!--头部栏-->
+    <div style="height: 90px; z-index: 1" class="baise yinying"></div>
+    <!--内容区-->
+    <div style="overflow: auto" class="flex1 flex neirong">
+      <!--左区-->
+      <div style="flex: 3" class="flex column bj8">
+        <!--数据区-->
+        <div class="flex shuju">
+          <!--数据块-->
+          <div style="height: 150px" class="flex1 baise ybj8 yinying shujuk"></div>
+          <div style="height: 150px" class="flex1 baise ybj8 yinying shujuk"></div>
+          <div style="height: 150px" class="flex1 baise ybj8 yinying shujuk"></div>
+          <div style="height: 150px" class="flex1 baise yinying shujuk"></div>
+        </div>
+        <!--列表区-->
+        <div class="flex column">
+          <!--列表项-->
+          <div style="height: 200px" class="baise sbj8 yinying"></div>
+          <div style="height: 200px" class="baise sbj8 yinying"></div>
+          <div style="height: 200px" class="baise sbj8 yinying"></div>
+          <div style="height: 200px" class="baise sbj8 yinying"></div>
+          <div style="height: 200px" class="baise sbj8 yinying"></div>
+          <div style="height: 200px" class="baise sbj8 yinying"></div>
+          <div style="height: 200px" class="baise sbj8 yinying"></div>
+          <div style="height: 200px" class="baise sbj8 yinying"></div>
+          <div style="height: 200px" class="baise sbj8 yinying"></div>
+          <div style="height: 200px" class="baise sbj8 yinying"></div>
+        </div>
+      </div>
+      <!--右区-->
+      <div style="flex: 1" class="flex column flex1 ybj8 sbj8 youqu">
+        <!--提示区-->
+        <div style="height: 450px" class="baise yinying"></div>
+        <!--消息区-->
+        <div style="height: 200px" class="baise sbj8 yinying"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
